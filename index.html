@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>WW3 · Grid Tactics</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header><p class="eyebrow">LOCAL HOTSEAT</p><h1>WW3 <span>Grid Tactics</span></h1></header>
+    <form id="setup">
+      <p>Choose a faction and three unit cards for each player.</p>
+      <div id="decks"></div>
+      <button type="submit">Start skirmish</button>
+      <p id="setup-error" role="status"></p>
+    </form>
+    <section id="match" hidden>
+      <div id="score"></div>
+      <div class="layout">
+        <div>
+          <div id="board" aria-label="Battlefield"></div>
+          <p class="legend">◇ Objective · + Friendly deployment · Bright outline: legal action</p>
+        </div>
+        <aside>
+          <h2>Reinforcements</h2>
+          <div id="cards"></div>
+          <p id="orders" role="status"></p>
+          <button id="end" type="button">End turn</button>
+          <button id="reset" type="button">New skirmish</button>
+        </aside>
+      </div>
+      <p class="brief">Move before attacking. Artillery must stay still to fire. Infantry gain cover in woods and towns. Earn 1 victory point per objective you occupy at the end of your turn. First to 8 wins. Each player starts with 8 deployment points and gains 4 per turn from round 2.</p>
+    </section>
+  </main>
+  <script type="module" src="./game.mjs"></script>
+</body>
+</html>
